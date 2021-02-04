@@ -81,7 +81,7 @@ body{
 .extra{
     height: 0;
     margin: 0 var(--padding-width);
-    padding-top: 25%;
+    padding-top: 20%;
     position: relative;
 }
 .section-1 .section{
@@ -89,7 +89,7 @@ body{
     padding: 0 var(--padding-width);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     background-color: var(--dark-violet);
 }
 .image-intro{
@@ -98,46 +98,42 @@ body{
     padding-top: 120.37%;
     background: url("./images/image-intro-desktop.jpg") no-repeat;
     background-size: contain;
-    top: 9rem;
+    top: 7rem;
 }
 .content{
-    margin-top: 9rem;
+    margin-top: 7rem;
     padding-top: 3rem;
     position: relative;
     z-index: 6;
+    color: var(--very-light-gray);
 }
 .content > *{
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 .content .title{
-    font-size: 4.5em;
-    color: var(--very-light-gray);
+    font-size: 4.5rem;
     line-height: 1em;
     font-family: 'DM Serif Display', sans-serif;
-    font-weight: 700;
-}
-.content .description{
-    color: var(--dark-grayish-violet);
-    font-size: 0.85em;
 }
 .content .call-to-action{
-    width: 8rem;
+    width: 7rem;
     text-align: center;
-    border-color: var(--dark-grayish-violet);
-    color: var(--dark-grayish-violet);
+    border-color: var(--very-light-gray);
+    text-transform: uppercase;
+    margin: 2.5rem 0;
 }
 .content::before{
     content: "";
     position: absolute;
     top: 0;
-    width: 10rem;
+    width: 9rem;
     border: 1px solid var(--dark-grayish-violet);
 }
 .extra::after{
     content: "";
     position: absolute;
     bottom: 0;
-    width: 10rem;
+    width: 9rem;
     border: 1px solid var(--dark-grayish-violet);
 }
 .section-2{
@@ -185,7 +181,7 @@ body{
 }
 .section-3 .section{
     position: relative;
-    padding: 3rem 5rem;
+    padding: 5rem;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -196,6 +192,7 @@ body{
 .section-3 .section .title{
     margin: 0;
     font-size: 3.5em;
+    line-height: 1em;
     font-family: 'DM Serif Display', sans-serif;
     width: 75%;
 }
@@ -225,13 +222,12 @@ body{
     cursor: pointer;
 }
 .footer .links{
-    margin: 2rem 0;
+    margin: 2rem 0 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     text-transform: uppercase;
     color: var(--very-dark-violet);
-    font-size: 0.75em;
     font-weight: 700;
 }
 .footer .links .column > .item:hover{
@@ -244,4 +240,7 @@ body{
     font-weight: 400;
     pointer-events: none;
     cursor: default;
+}
+@media (max-width: 1024px){
+
 }
