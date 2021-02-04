@@ -15,6 +15,9 @@ body{
     font-size: 16px;
     background-color: #fff;
 }
+.icon-hamburger, .icon-close{
+    display: none;
+}
 .navigation{
     padding: 0 var(--padding-width);
     display: flex;
@@ -111,7 +114,7 @@ body{
     margin: 1.5rem 0;
 }
 .content .title{
-    font-size: 4.5rem;
+    font-size: 4.5em;
     line-height: 1em;
     font-family: 'DM Serif Display', sans-serif;
 }
@@ -242,5 +245,135 @@ body{
     cursor: default;
 }
 @media (max-width: 1024px){
-
+    body{
+        --padding-width: 6vw;
+        --padding-height: 1rem;
+    }
+    .icon-hamburger{
+        display: block;
+    }
+    .navigation{
+        position: relative;
+        padding: var(--padding-height) var(--padding-width);
+    }
+    .menu{
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        background-color: #000;
+        width: 100%;
+        height: 77vh;
+        padding: 2rem 0;
+        gap: 2rem;
+        display: none;
+    }
+    .menu .item{
+        color: var(--very-light-gray);
+    }
+    .item.call-to-action{
+        color: var(--very-light-gray);
+        border-color: var(--very-light-gray);
+    }
+    .item.call-to-action:hover{
+        background-color: var(--very-light-gray);
+        color: var(--very-light-gray);
+    }
+    .section-1::before{
+        top: initial;
+        bottom: 0;
+        right: 0;
+        width: 124px;
+        height: 330px;
+        background: url("./images/bg-pattern-intro-right-mobile.svg") no-repeat;
+    }
+    .section-1::after{
+        top: 120.7vw;
+        left: 0;
+        width: 168px;
+        height: 165px;
+        background: url("./images/bg-pattern-intro-left-mobile.svg") no-repeat;
+    }
+    .extra{
+        padding-top: 40%;
+    }
+    .section-1 .section{
+        padding: 0;
+        grid-template-columns: auto;
+        gap: 1.5rem;
+        background-color: var(--dark-violet);
+    }
+    .image-intro{
+        grid-area: 1/1/1/1;
+        top: 0;
+    }
+    .content{
+        margin: 0;
+        padding: var(--padding-height) var(--padding-width);
+        text-align: center;
+    }
+    .content .title{
+        font-size: 3em;
+    }
+    .content .call-to-action{
+        margin: 2.5rem auto;
+    }
+    .content::before{
+        display: none;
+    }
+    .extra::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .section-2{
+        text-align: center;
+    }
+    .section-2 > .title{
+        font-size: 3em;
+    }
+    .features{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    .section-3{
+        margin: 5rem var(--padding-width);
+    }
+    .section-3:before{
+        background: url("./images/bg-pattern-how-we-work-mobile.svg") no-repeat right;
+        background-size: contain;
+    }
+    .section-3 .section{
+        padding: 4rem 3rem;
+        grid-template-columns: auto;
+        gap: 2rem;
+        text-align: center;
+    }
+    .section-3 .section .title{
+        font-size: 2.5em;
+        width: 100%;
+    }
+    .section-3 .section .call-to-action{
+        width: 7rem;
+        margin: auto;
+    }
+    .footer{
+        background: url("./images/bg-pattern-footer-mobile.svg") no-repeat top left;
+        background-size: contain;
+    }
+    .footer .head{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+    .footer .links{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
 }
